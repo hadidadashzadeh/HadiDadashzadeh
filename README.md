@@ -1,86 +1,98 @@
-# Receipt & Expense Analyzer
+# Hi there 👋 I'm Hadi Dadashzade
 
-A command-line tool that reads receipt photos with OCR, extracts the vendor, date, and total, and turns a folder of receipts into a spending report — entirely offline, with no cloud service, account, or API key involved.
+💻 Python Developer | 📊 Data & Automation | 🤖 AI Enthusiast
 
-```bash
-python expense_cli.py --add receipt1.jpg receipt2.jpg
-python expense_cli.py --report
-```
+[![Profile views](https://komarev.com/ghpvc/?username=hadidadashzade&style=flat-square&color=blue)](https://github.com/hadidadashzade)
 
-That's the whole workflow: add receipts as you collect them, then generate an updated report whenever you want a picture of spending.
+---
 
-## What it covers
+## 🧠 About Me
 
-- **OCR extraction** — vendor name, date, and total amount, straight from a photo or scan
-- **Automatic categorization** — vendor names are matched against spending categories (Groceries, Dining, Transportation, Health, Shopping, Utilities, Entertainment) with no manual tagging
-- **Spending trend over time** — monthly totals
-- **Category breakdown** — where the money is actually going
-- **Top vendors by spend**
+I'm a Python developer focused on data analysis and automation — turning messy real-world data (spreadsheets, APIs, receipts, content) into clear, actionable reports.
 
-## Quick start
+Certified by **Harvard CS50x (2022)** and Iran's Technical & Vocational Training Organization in Python.
 
-```bash
-pip install -r requirements.txt
-```
+**🟢 Currently available for remote freelance / contract work.** If you need a Python tool built — data analysis, automation, a CLI utility, or a WordPress integration — let's talk.
 
-`pytesseract` is a Python wrapper — it needs the actual Tesseract OCR engine installed separately:
-- **Windows**: install the [UB-Mannheim build](https://github.com/UB-Mannheim/tesseract/wiki) and keep the default install location — this tool automatically checks for it there
-- **macOS**: `brew install tesseract`
-- **Linux**: `sudo apt install tesseract-ocr`
+---
 
-If it's installed somewhere non-default and the tool still can't find it, open `receipt_ocr.py` in a text editor and add this line right after `import pytesseract`, with your actual install path:
-```python
-pytesseract.pytesseract.tesseract_cmd = r"C:\path\to\tesseract.exe"
-```
+## 📄 My Resume (PDF)
 
-```bash
+🎯 Download my latest resumes here:
 
-# Try it instantly with sample data — no images or OCR needed
-python expense_cli.py --demo
+- 🇬🇧 [English Resume](https://github.com/hadidadashzade/HadiDadashzade/blob/main/HadiDadashzade_Resume_EN.pdf)
+- 🇮🇷 [رزومه فارسی](https://github.com/hadidadashzade/HadiDadashzade/blob/main/HadiDadashzade_Resume_FA.pdf)
 
-# Process your own receipts
-python expense_cli.py --add path/to/receipt1.jpg path/to/receipt2.jpg
-python expense_cli.py --list
-python expense_cli.py --report
-```
+---
 
-Output lands in `output/`:
-- `report.html` — a single self-contained file (charts embedded inline) — open it in any browser
-- `receipts.csv` — the underlying parsed data
-- individual `.png` charts
+## 🌐 Connect with Me
 
-Receipts you add are stored locally in `data/receipts.json`, so the database persists between runs — each `--report` reflects everything added so far.
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge&logoColor=white)](https://linkedin.com/in/hadi-dadashzade)
+[![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&style=for-the-badge&logoColor=white)](https://github.com/hadidadashzade)
+[![Telegram](https://img.shields.io/badge/Telegram-088CC?logo=telegram&style=for-the-badge&logoColor=white)](https://t.me/mrhadi_dev)
 
-## How it works
+---
 
-| File | Responsibility |
-|---|---|
-| `receipt_ocr.py` | Runs OCR on a receipt image (Tesseract) and parses out vendor, date, and total using a set of pattern-matching heuristics. |
-| `categorize.py` | Assigns a spending category from the vendor name via keyword matching. |
-| `database.py` | Local JSON storage for parsed receipts — add, list, load. |
-| `analysis.py` | Converts stored receipts into a pandas DataFrame and computes report metrics. |
-| `visualize.py` | Builds the matplotlib charts. |
-| `report.py` | Assembles everything into one portable HTML file. |
-| `expense_cli.py` | CLI entry point that wires it all together. |
+## 🛠️ Tech Stack
 
-## Design notes
+[![](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white&style=for-the-badge)]()
+[![](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)]()
+[![](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)]()
+[![](https://img.shields.io/badge/Matplotlib-11557C?style=for-the-badge)]()
+[![](https://img.shields.io/badge/WordPress-21759B?style=for-the-badge&logo=wordpress&logoColor=white)]()
+[![](https://img.shields.io/badge/Tkinter-FFB400?style=for-the-badge&logo=python&logoColor=white)]()
+[![](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)]()
+[![](https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white&style=for-the-badge)]()
+[![](https://img.shields.io/badge/Git-F05032?logo=git&logoColor=white&style=for-the-badge)]()
+[![](https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white)]()
 
-- **Receipt parsing is heuristic by nature** — layouts vary too much for a rigid template, so the parser makes pragmatic choices: the vendor is the first non-empty line (store names are almost always printed at the top), the date is the first recognizable date pattern found anywhere in the text, and the total is read from the line containing a "total"-style keyword — explicitly distinguishing "Total" from "Subtotal" so the pre-tax amount isn't mistaken for the final one.
-- **No total line? No problem.** If no total keyword is found, the parser falls back to the largest currency-looking amount on the receipt, since line items are almost always smaller than the final total.
-- **OCR accuracy depends on image quality.** Clear, well-lit, reasonably high-resolution photos parse far more reliably than blurry or low-contrast ones — this is a property of OCR in general, not specific to this tool.
+---
 
-## Demo dataset
+## 🚀 Featured Projects
 
-`sample_data/demo_receipts.json` is a set of synthetic but realistic receipts spanning several months and categories, so the tool can be tried and demoed without any real receipt images. Run `python expense_cli.py --demo` to see it in action.
+### 📊 WordPress Site Analytics Reporter
 
-`sample_data/sample_receipt_images/` also has a few synthetic receipt images to try the real OCR path end-to-end:
-```bash
-python expense_cli.py --add sample_data/sample_receipt_images/*.png
-python expense_cli.py --report
-```
+Connects to any public WordPress site via its REST API and generates a content & engagement report — no plugin or login required.
+🔗 [Repository](https://github.com/hadidadashzade/wp-analytics-reporter)
+📈 Posting trends, category breakdown, top authors — exported as a portable HTML report
+🐍 Python · pandas · matplotlib · REST APIs
 
-## Possible extensions
+---
 
-- Support PDF receipts (scanned or digital) in addition to images
-- Export a monthly summary to a spreadsheet
-- A `--budget` mode that flags categories exceeding a set limit
+### 🧾 Receipt & Expense Analyzer
+
+OCRs receipt photos and turns them into a spending report — vendor, date, and amount extracted automatically, fully offline.
+🔗 [Repository](https://github.com/hadidadashzade/receipt-expense-analyzer)
+📊 Auto-categorized spending, monthly trends, top vendors
+🐍 Python · Tesseract OCR · pandas · matplotlib
+
+---
+
+### 🧾 Invoice Generator CLI
+
+A clean command-line tool to convert Excel invoice files into styled PDF files.
+✅ Reads Excel (.xlsx) files
+✅ Automatically calculates totals
+✅ Ideal for freelancers and shops
+
+---
+
+### 🤖 AI Daily Planner
+
+An intelligent daily planner with smart task suggestions.
+📆 Supports priorities and deadlines
+🧠 Uses AI to reorder and improve your task list
+🖥️ Built with Python Tkinter + ttkbootstrap
+
+---
+
+## 📈 GitHub Stats
+
+[![](https://github-readme-stats.vercel.app/api?username=hadidadashzade&show_icons=true&theme=tokyonight&hide_border=true)](https://github.com/hadidadashzade)
+[![](https://github-readme-stats.vercel.app/api/top-langs/?username=hadidadashzade&layout=compact&theme=tokyonight&hide_border=true)](https://github.com/hadidadashzade)
+
+---
+
+## ✍️ Quote of the Day
+
+[![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)](https://github.com/hadidadashzade)
