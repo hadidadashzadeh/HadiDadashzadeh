@@ -1,4 +1,4 @@
-# Hi there 👋 I'm Hadi Dadashzade
+# Hi there 👋 I'm Hadi Dadashzadeh
 
 💻 Python Developer | 📊 Data & Automation | 🤖 AI Enthusiast
 
