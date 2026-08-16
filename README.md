@@ -20,8 +20,8 @@ Certified by **Harvard CS50x (2022)** and Iran's Technical & Vocational Training
 
 🎯 Download my latest resumes here:
 
-- 🇬🇧 [English Resume](https://github.com/hadidadashzade/HadiDadashzade/blob/main/HadiDadashzadeh_Resume_EN.pdf)
-- 🇮🇷 [رزومه فارسی](https://github.com/hadidadashzade/HadiDadashzade/blob/main/HadiDadashzadeh_Resume_FA.pdf)
+- 🇬🇧 [English Resume](https://github.com/hadidadashzade/HadiDadashzade/blob/main/Hadi_Dadashzadeh_Resume_EN.pdf)
+- 🇮🇷 [رزومه فارسی](https://github.com/hadidadashzade/HadiDadashzade/blob/main/Hadi_Dadashzadeh_Resume_FA.pdf)
 
 ---
 
