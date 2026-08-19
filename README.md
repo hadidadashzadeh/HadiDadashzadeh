@@ -28,7 +28,7 @@ Certified by **Harvard CS50x (2022)** and Iran's Technical & Vocational Training
 
 ## 🌐 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge&logoColor=white)](https://linkedin.com/in/hadi-dadashzade)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-blue?logo=linkedin&style=for-the-badge&logoColor=white)](https://linkedin.com/in/hadi-dadashzadeh)
 [![GitHub](https://img.shields.io/badge/GitHub-000?logo=github&style=for-the-badge&logoColor=white)](https://github.com/hadidadashzadeh)
 [![Telegram](https://img.shields.io/badge/Telegram-088CC?logo=telegram&style=for-the-badge&logoColor=white)](https://t.me/mrhadi_dev)
 
